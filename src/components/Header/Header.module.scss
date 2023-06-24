@@ -1,0 +1,29 @@
+.header {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 4px solid var(--border-color);
+  position: relative;
+
+  @media screen and (min-width: 578px) {
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-top: 29px;
+  }
+}
+
+.borderGradient {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 25%;
+  min-width: 138px;
+  height: 4px;
+  display: block;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent--dark) 0%,
+    var(--color-accent) 100%
+  );
+}

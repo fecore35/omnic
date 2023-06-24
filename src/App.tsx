@@ -7,10 +7,13 @@ import CellsSizePage from "pages/CellsSizePage";
 import InstructionsPage from "pages/InstructionsPage";
 import NotFoundPage from "pages/NotFoundPage";
 import ShopPage from "pages/ShopPage";
+import Header from "components/Header/Header";
 
 function App() {
   return (
     <div>
+      <Header />
+
       <Routes>
         <Route path={Path.HOME} element={<HomePage />} />
         <Route path={Path.PACKAGE} element={<PackagePage />} />
