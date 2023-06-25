@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route
           path={Path.HOME}
-          element={<PublicRoute component={<HomePage />} />}
+          element={<PrivateRoute component={<HomePage />} />}
         />
         <Route
           path={Path.PACKAGE}
