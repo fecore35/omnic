@@ -13,6 +13,17 @@
   }
 }
 
+.navigation {
+  justify-content: space-between;
+}
+
+.name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
 .borderGradient {
   position: absolute;
   bottom: -4px;
