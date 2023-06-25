@@ -13,9 +13,11 @@ const Title: FunctionComponent<TitleProps> = ({
   className,
   ...props
 }) => {
+  const elementClass = `${className ? className : ""} ${s.title}`;
+
   return React.createElement(
     type,
-    { ...props, className: `${className} ${s.title}` },
+    { ...props, className: elementClass },
     children
   );
 };
