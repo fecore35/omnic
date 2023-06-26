@@ -16,7 +16,7 @@ interface ItemProps {
 const Item: FunctionComponent<ItemProps> = ({ title, to, image }) => {
   return (
     <li className={s.item}>
-      <Link to={to} className="link">
+      <Link to={to} className={s.link}>
         <picture>
           <img src={image} width="436" height="310" alt={title} />
         </picture>

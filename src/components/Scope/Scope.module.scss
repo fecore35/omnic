@@ -48,7 +48,12 @@
   padding-bottom: 20px;
   padding-right: 40px;
   padding-left: 40px;
-  background-color: #032edd;
+  background-color: var(--color-accent);
+
+  &:hover,
+  &:focus {
+    background-color: var(--active-color);
+  }
 
   @media screen and (min-width: 480px) {
     font-size: 20px;
@@ -57,5 +62,11 @@
   @media screen and (min-width: 1200px) {
     padding-right: 82px;
     padding-left: 82px;
+  }
+}
+
+.link {
+  &:hover .title {
+    background-color: var(--active-color);
   }
 }

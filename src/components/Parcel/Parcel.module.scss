@@ -95,7 +95,7 @@
 
   &:hover,
   &:focus {
-    color: var(--background-btn-focus);
-    background-color: var(--color-background-btn);
+    border-color: var(--active-color);
+    background-color: var(--active-color);
   }
 }
