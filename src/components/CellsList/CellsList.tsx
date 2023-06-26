@@ -14,7 +14,7 @@ interface CellsListProps {
 
 const CellsList: FunctionComponent<CellsListProps> = ({ items, current }) => {
   return (
-    <Section className="cellsList">
+    <Section className={s.cellsList}>
       <>
         <Title type="h2">Оберіть розмір посилки</Title>
 

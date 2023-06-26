@@ -1,6 +1,13 @@
 .cellsList {
-  :global(.container) {
-    max-width: 770px;
+  @media screen and (min-width: 768px) {
+    :global(.container) {
+      max-width: 770px;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    :global(.container) {
+      max-width: 1200px;
+    }
   }
 }
 
@@ -12,11 +19,75 @@
 .list {
   padding-left: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   @media screen and (min-width: 768px) {
     display: grid;
     gap: 20px;
-    grid-template-areas: "C C C";
+    // grid-template-areas:
+    //   "A A A A   D D D D   J J J J"
+    //   "A A A A   D D D D   J J J J"
+    //   "B B B B   E E E E   M M M M"
+    //   "B B B B   E E E E   M M M M"
+    //   "C C C C   O O O O   L L L L"
+    //   "C C C C   O O O O   L L L L";
+
+    grid-template-areas:
+      "A A A A   D D D D   J J J J"
+      "A A A A   D D D D   J J J J"
+      "B B B B   E E E E   J J J J"
+      "B B B B   E E E E   M M M M"
+      "B B B B   E E E E   M M M M"
+      "C C C C   O O O O   M M M M"
+      "C C C C   O O O O   M M M M"
+      "C C C C   O O O O   M M M M"
+      "L L L L   L L L L   L L L L"
+      "L L L L   L L L L   L L L L"
+      "L L L L   L L L L   L L L L"
+      "L L L L   L L L L   L L L L";
+  }
+
+  @media screen and (min-width: 1400px) {
+    grid-template-areas:
+      "A A A A   D D D D   J J J J   L L L L"
+      "A A A A   D D D D   J J J J   L L L L"
+      "B B B B   E E E E   J J J J   L L L L"
+      "B B B B   E E E E   M M M M   L L L L"
+      "B B B B   E E E E   M M M M   L L L L"
+      "C C C C   O O O O   M M M M   L L L L"
+      "C C C C   O O O O   M M M M   L L L L"
+      "C C C C   O O O O   M M M M   L L L L";
+  }
+
+  :global(.cell--xxs) {
+    grid-area: A;
+  }
+
+  :global(.cell--xs) {
+    grid-area: B;
+  }
+  :global(.cell--s) {
+    grid-area: C;
+  }
+  :global(.cell--m) {
+    grid-area: D;
+  }
+  :global(.cell--l) {
+    grid-area: E;
+  }
+  :global(.cell--xl) {
+    grid-area: O;
+  }
+  :global(.cell--xxl) {
+    grid-area: J;
+  }
+  :global(.cell--xxxl) {
+    grid-area: M;
+  }
+  :global(.cell--xxxxl) {
+    grid-area: L;
   }
 }
 
