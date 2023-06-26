@@ -29,7 +29,10 @@ const CellsList: FunctionComponent<CellsListProps> = ({ items, current }) => {
         </div>
 
         <div className={s.footer}>
-          <Link to={Path.SHOP} className={`${s.btn} ${s.btnBlue}`}>
+          <Link
+            to={Path.SHOP}
+            className={`${s.btn} ${!current ? s.disabled : s.btnGreen}`}
+          >
             ПІДТВЕРДИТИ
           </Link>
           <Link to={Path.PACKAGE} className={s.btn}>

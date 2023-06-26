@@ -92,10 +92,6 @@
   }
 }
 
-.cell__footer {
-  justify-content: space-between;
-}
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -150,13 +146,21 @@
   }
 }
 
-.btnBlue {
+.disabled {
   color: var(--color-text-w);
   background-color: var(--color-accent);
+  pointer-events: none;
+}
+
+.btnGreen {
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+  color: var(--color-text-w);
 
   &:hover,
   &:focus {
-    color: var(--background-btn-focus);
-    background-color: var(--color-background-btn);
+    color: var(--active-color);
+    border-color: var(--active-color);
+    background-color: #fff;
   }
 }

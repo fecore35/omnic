@@ -53,5 +53,5 @@ export const cellReducer = createSlice({
   },
 });
 
-export const {} = cellReducer.actions;
+export const { setCurrentCell } = cellReducer.actions;
 export default cellReducer.reducer;

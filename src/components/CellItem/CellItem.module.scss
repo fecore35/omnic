@@ -12,7 +12,7 @@
 .btn {
   border-radius: 4px;
   border: 2px solid #cecece;
-  background: #fff;
+  background: var(color-background-btn);
   box-shadow: 0px 0px 6px 0px rgba(85, 115, 133, 0.4);
   cursor: pointer;
 
@@ -27,7 +27,8 @@
   &:disabled {
     pointer-events: none;
     cursor: default;
-    border-color: red;
+    border-color: var(--disabled-color);
+    box-shadow: 0px 0px 6px 0px var(--disabled-color);
     opacity: 0.7;
 
     * {
@@ -36,12 +37,26 @@
   }
 
   &:hover {
-    border-color: #032edd;
+    border-color: var(--color-accent);
     background: var(
       --1,
       radial-gradient(50% 50% at 50% 50%, #fff 0%, #fdfdfd 73.96%, #fcfcfc 100%)
     );
-    box-shadow: 0px 0px 6px 0px #032edd;
+    box-shadow: 0px 0px 6px 0px var(--color-accent);
+  }
+}
+
+.active {
+  border-color: var(--active-color);
+  box-shadow: 0px 0px 6px 0px var(--active-color);
+
+  &:hover {
+    border-color: var(--active-color);
+    background: var(
+      --1,
+      radial-gradient(50% 50% at 50% 50%, #fff 0%, #fdfdfd 73.96%, #fcfcfc 100%)
+    );
+    box-shadow: 0px 0px 6px 0px var(--active-color);
   }
 }
 
@@ -79,7 +94,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #032edd;
+  color: var(--color-accent);
   text-transform: uppercase;
   margin: 0;
 }
