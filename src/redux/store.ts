@@ -1,5 +1,4 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import deviceReducer from "./device/device-reducer";
 import {
   persistStore,
   persistReducer,
@@ -11,6 +10,8 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import deviceReducer from "./device/device-reducer";
+import cellReducer from "./cell/cell-reducer";
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -20,14 +21,20 @@ const middleware = [
   }),
 ];
 
-const todosPersistConfig = {
+const devicePersistConfig = {
   key: "device",
+  storage,
+};
+
+const cellPersistConfig = {
+  key: "cell",
   storage,
 };
 
 export const store = configureStore({
   reducer: {
-    device: persistReducer(todosPersistConfig, deviceReducer),
+    device: persistReducer(devicePersistConfig, deviceReducer),
+    cell: persistReducer(cellPersistConfig, cellReducer),
   },
   middleware,
   devTools: process.env.NODE_ENV !== "production",
