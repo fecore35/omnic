@@ -1,27 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchCellsList } from "./cell-operations";
 
-interface CellParams {
+interface ICellParams {
   width: number;
   height: number;
   depth: number;
   label: string;
 }
 
-interface Cell {
+export interface ICell {
   type: string;
   has_empty: boolean;
-  params: CellParams;
+  params: ICellParams;
 }
 
-interface CellsList {
-  cell_types: Cell[] | null;
-  current: Cell | null;
+interface ICellsList {
+  cell_types: ICell[] | null;
+  current: ICell | null;
   isLoading: boolean;
   error: any;
 }
 
-const initialState: CellsList = {
+const initialState: ICellsList = {
   cell_types: null,
   current: null,
   isLoading: false,
