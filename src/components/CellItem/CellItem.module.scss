@@ -1,4 +1,15 @@
 .cell {
+  display: flex;
+  flex: auto;
+  margin: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    width: auto;
+  }
+}
+
+.btn {
   border-radius: 4px;
   border: 2px solid #cecece;
   background: #fff;
@@ -6,18 +17,22 @@
   cursor: pointer;
 
   display: flex;
+  width: 100%;
   align-items: self-start;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 12px;
   padding-bottom: 12px;
 
-  flex: auto;
-  margin: 10px;
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+    border-color: red;
+    opacity: 0.7;
 
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    width: auto;
+    * {
+      pointer-events: none;
+    }
   }
 
   &:hover {
