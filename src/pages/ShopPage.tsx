@@ -11,9 +11,12 @@ const ShopPage: FunctionComponent<ShopProps> = () => {
       <Section>
         <>
           <Title type="h3">Виберіть зі списку зручний вам Ваш Поштомат</Title>
-          <Link to="/?device_uid=34670a76-6022-4df5-ac1d-68f88589c904">
-            #0017
-          </Link>
+
+          <div className="text">
+            <Link to="/?device_uid=34670a76-6022-4df5-ac1d-68f88589c904">
+              #0017
+            </Link>
+          </div>
         </>
       </Section>
     </>
