@@ -10,6 +10,7 @@ export const findCellTitleBySize = (type: string) => {
     if (e.type === type) {
       return e.title;
     }
+    return false;
   });
 
   return element?.title || type;
